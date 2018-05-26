@@ -1,22 +1,34 @@
+const path = require('path');
+const glob = require('glob');
+const webpack = require('webpack');
+
 module.exports = {
-	entry: ['./src/index.js', './style/index.scss'],
+	entry: "./src/index.js",
 	output: {
 		path: __dirname,
 		filename: "dist/bundle.js",
 		library: '',
-		libraryTarget: 'umd' // commonjs
+		libraryTarget: 'commonjs'
 	},
 	module: {
 		rules: [
-			{ test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-			{ test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
+			{
+				test: /\.js$/,
+				loader: "babel-loader",
+			},
 			{
 				test: /\.scss$/,
-				use: [
-					"style-loader", // creates style nodes from JS strings
-					"css-loader", // translates CSS into CommonJS
-					"sass-loader" // compiles Sass to CSS
-				]
+				loaders: [
+					'style-loader',
+					'css-loader',
+					{
+						loader: 'sass-loader',
+						options: {
+							sourceMap: true,
+							includePaths: glob.sync('./node_modules').map((d) => path.join(__dirname, d)),
+						},
+					},
+				],
 			}
 		]
 	}

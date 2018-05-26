@@ -1,14 +1,21 @@
+import '../node_modules/spectre.css/src/spectre.scss'
+
 import * as Button from './components/button'
 import * as Card from './components/card'
-import * as Form from './components/form'
 import * as Checkbox from './components/checkbox'
-
-let Example = 'Example';
+import * as Img from './components/img'
+import * as Form from './components/form'
+import * as Icon from './components/icon'
+import * as Select from './components/select'
+import * as Radio from './components/radio'
+import * as Switch from './components/switch'
+import * as Textarea from './components/textarea'
+import * as Menu from './components/menu'
 
 export {
-	Example, Button, Checkbox, Card, Form
+	Button, Card, Checkbox, Img, Form, Icon, Select, Radio, Switch, Textarea, Menu
 }
 
 export default {
-	Example, Button, Checkbox, Card, Form
+	Button, Card, Form, Checkbox, Img, Icon, Select, Radio, Switch, Textarea, Menu
 }

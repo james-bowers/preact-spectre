@@ -1,5 +1,5 @@
 import { h } from 'preact'
-import helper from './helper'
+import * as helper from './helper'
 
 export let ImageContainer = (props) => <div class="card-image"> {props.children} </div>
 

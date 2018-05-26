@@ -1,5 +1,5 @@
 import { h } from 'preact'
-import helper from './helper'
+import * as helper from './helper'
 
 export let Group = (props) => {
 	return (

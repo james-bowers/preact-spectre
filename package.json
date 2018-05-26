@@ -1,6 +1,6 @@
 {
   "name": "preact-spectre",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "",
   "main": "dist/bundle.js",
   "scripts": {
@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "preact": "^8.2.9",
-    "spectre.css": "^0.5.1"
+    "spectre.css": "^0.5.1",
+    "webpack": "^3.12.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -26,7 +27,7 @@
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
-    "webpack": "^4.9.1",
+    "webpack": "^3.12.0",
     "webpack-cli": "^2.1.4"
   }
 }
