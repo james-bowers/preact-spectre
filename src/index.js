@@ -3,10 +3,12 @@ import * as Card from './components/card'
 import * as Form from './components/form'
 import * as Checkbox from './components/checkbox'
 
+let Example = 'Example';
+
 export {
-	Button, Checkbox, Card, Form
+	Example, Button, Checkbox, Card, Form
 }
 
 export default {
-	Button, Checkbox, Card, Form
+	Example, Button, Checkbox, Card, Form
 }
