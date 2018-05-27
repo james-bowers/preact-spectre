@@ -19,7 +19,10 @@ export let Button = (props) => {
 		square: 'btn-action',
 		circle: 'btn-action circle',
 		disabled: 'disabled',
-		loading: 'loading'
+		loading: 'loading',
+		small: 'btn-sm',
+		large: 'btn-lg',
+		full: 'btn-block'
 	})
 
 	return <button onClick={props.onClick} class={classes.join(' ')}>{props.children}</button>	

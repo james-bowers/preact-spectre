@@ -1152,7 +1152,10 @@ var Button = exports.Button = function Button(props) {
 		square: 'btn-action',
 		circle: 'btn-action circle',
 		disabled: 'disabled',
-		loading: 'loading'
+		loading: 'loading',
+		small: 'btn-sm',
+		large: 'btn-lg',
+		full: 'btn-block'
 	});
 
 	return (0, _preact.h)(
@@ -1257,9 +1260,11 @@ var Container = exports.Container = function Container(props) {
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.Menu = exports.Textarea = exports.Switch = exports.Radio = exports.Select = exports.Icon = exports.Form = exports.Img = exports.Checkbox = exports.Card = exports.Button = undefined;
+exports.Menu = exports.TextArea = exports.Switch = exports.Radio = exports.Select = exports.Icon = exports.Form = exports.Img = exports.Checkbox = exports.Card = exports.Button = undefined;
 
 __webpack_require__(5);
+
+__webpack_require__(19);
 
 var _button = __webpack_require__(2);
 
@@ -1299,7 +1304,7 @@ var Switch = _interopRequireWildcard(_switch);
 
 var _textarea = __webpack_require__(17);
 
-var Textarea = _interopRequireWildcard(_textarea);
+var TextArea = _interopRequireWildcard(_textarea);
 
 var _menu = __webpack_require__(18);
 
@@ -1316,10 +1321,10 @@ exports.Icon = Icon;
 exports.Select = Select;
 exports.Radio = Radio;
 exports.Switch = Switch;
-exports.Textarea = Textarea;
+exports.TextArea = TextArea;
 exports.Menu = Menu;
 exports.default = {
-	Button: Button, Card: Card, Form: Form, Checkbox: Checkbox, Img: Img, Icon: Icon, Select: Select, Radio: Radio, Switch: Switch, Textarea: Textarea, Menu: Menu
+	Button: Button, Card: Card, Form: Form, Checkbox: Checkbox, Img: Img, Icon: Icon, Select: Select, Radio: Radio, Switch: Switch, TextArea: TextArea, Menu: Menu
 };
 
 /***/ }),
@@ -2309,6 +2314,70 @@ var Container = exports.Container = function Container(props) {
 		props.children
 	);
 };
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(20);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(8)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../css-loader/index.js!../../sass-loader/lib/loader.js??ref--1-2!./spectre-icons.scss", function() {
+		var newContent = require("!!../../css-loader/index.js!../../sass-loader/lib/loader.js??ref--1-2!./spectre-icons.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(7)(false);
+// imports
+
+
+// module
+exports.push([module.i, "/*! Spectre.css Icons v0.5.1 | MIT License | github.com/picturepan2/spectre */\n.icon {\n  box-sizing: border-box;\n  display: inline-block;\n  font-size: inherit;\n  font-style: normal;\n  height: 1em;\n  position: relative;\n  text-indent: -9999px;\n  vertical-align: middle;\n  width: 1em; }\n  .icon::before, .icon::after {\n    display: block;\n    left: 50%;\n    position: absolute;\n    top: 50%;\n    transform: translate(-50%, -50%); }\n  .icon.icon-2x {\n    font-size: 1.6rem; }\n  .icon.icon-3x {\n    font-size: 2.4rem; }\n  .icon.icon-4x {\n    font-size: 3.2rem; }\n\n.accordion .icon,\n.btn .icon,\n.toast .icon,\n.menu .icon {\n  vertical-align: -10%; }\n\n.btn-lg .icon {\n  vertical-align: -15%; }\n\n.icon-arrow-down::before,\n.icon-arrow-left::before,\n.icon-arrow-right::before,\n.icon-arrow-up::before,\n.icon-downward::before,\n.icon-back::before,\n.icon-forward::before,\n.icon-upward::before {\n  border: 0.1rem solid currentColor;\n  border-bottom: 0;\n  border-right: 0;\n  content: \"\";\n  height: .65em;\n  width: .65em; }\n\n.icon-arrow-down::before {\n  transform: translate(-50%, -75%) rotate(225deg); }\n\n.icon-arrow-left::before {\n  transform: translate(-25%, -50%) rotate(-45deg); }\n\n.icon-arrow-right::before {\n  transform: translate(-75%, -50%) rotate(135deg); }\n\n.icon-arrow-up::before {\n  transform: translate(-50%, -25%) rotate(45deg); }\n\n.icon-back::after,\n.icon-forward::after {\n  background: currentColor;\n  content: \"\";\n  height: 0.1rem;\n  width: .8em; }\n\n.icon-downward::after,\n.icon-upward::after {\n  background: currentColor;\n  content: \"\";\n  height: .8em;\n  width: 0.1rem; }\n\n.icon-back::after {\n  left: 55%; }\n\n.icon-back::before {\n  transform: translate(-50%, -50%) rotate(-45deg); }\n\n.icon-downward::after {\n  top: 45%; }\n\n.icon-downward::before {\n  transform: translate(-50%, -50%) rotate(-135deg); }\n\n.icon-forward::after {\n  left: 45%; }\n\n.icon-forward::before {\n  transform: translate(-50%, -50%) rotate(135deg); }\n\n.icon-upward::after {\n  top: 55%; }\n\n.icon-upward::before {\n  transform: translate(-50%, -50%) rotate(45deg); }\n\n.icon-caret::before {\n  border-top: .3em solid currentColor;\n  border-right: .3em solid transparent;\n  border-left: .3em solid transparent;\n  content: \"\";\n  height: 0;\n  transform: translate(-50%, -25%);\n  width: 0; }\n\n.icon-menu::before {\n  background: currentColor;\n  box-shadow: 0 -.35em, 0 .35em;\n  content: \"\";\n  height: 0.1rem;\n  width: 100%; }\n\n.icon-apps::before {\n  background: currentColor;\n  box-shadow: -.35em -.35em, -.35em 0, -.35em .35em, 0 -.35em, 0 .35em, .35em -.35em, .35em 0, .35em .35em;\n  content: \"\";\n  height: 3px;\n  width: 3px; }\n\n.icon-resize-horiz::before, .icon-resize-horiz::after,\n.icon-resize-vert::before,\n.icon-resize-vert::after {\n  border: 0.1rem solid currentColor;\n  border-bottom: 0;\n  border-right: 0;\n  content: \"\";\n  height: .45em;\n  width: .45em; }\n\n.icon-resize-horiz::before,\n.icon-resize-vert::before {\n  transform: translate(-50%, -90%) rotate(45deg); }\n\n.icon-resize-horiz::after,\n.icon-resize-vert::after {\n  transform: translate(-50%, -10%) rotate(225deg); }\n\n.icon-resize-horiz::before {\n  transform: translate(-90%, -50%) rotate(-45deg); }\n\n.icon-resize-horiz::after {\n  transform: translate(-10%, -50%) rotate(135deg); }\n\n.icon-more-horiz::before,\n.icon-more-vert::before {\n  background: currentColor;\n  box-shadow: -.4em 0, .4em 0;\n  border-radius: 50%;\n  content: \"\";\n  height: 3px;\n  width: 3px; }\n\n.icon-more-vert::before {\n  box-shadow: 0 -.4em, 0 .4em; }\n\n.icon-plus::before,\n.icon-minus::before,\n.icon-cross::before {\n  background: currentColor;\n  content: \"\";\n  height: 0.1rem;\n  width: 100%; }\n\n.icon-plus::after,\n.icon-cross::after {\n  background: currentColor;\n  content: \"\";\n  height: 100%;\n  width: 0.1rem; }\n\n.icon-cross::before {\n  width: 100%; }\n\n.icon-cross::after {\n  height: 100%; }\n\n.icon-cross::before, .icon-cross::after {\n  transform: translate(-50%, -50%) rotate(45deg); }\n\n.icon-check::before {\n  border: 0.1rem solid currentColor;\n  border-right: 0;\n  border-top: 0;\n  content: \"\";\n  height: .5em;\n  width: .9em;\n  transform: translate(-50%, -75%) rotate(-45deg); }\n\n.icon-stop {\n  border: 0.1rem solid currentColor;\n  border-radius: 50%; }\n  .icon-stop::before {\n    background: currentColor;\n    content: \"\";\n    height: 0.1rem;\n    transform: translate(-50%, -50%) rotate(45deg);\n    width: 1em; }\n\n.icon-shutdown {\n  border: 0.1rem solid currentColor;\n  border-radius: 50%;\n  border-top-color: transparent; }\n  .icon-shutdown::before {\n    background: currentColor;\n    content: \"\";\n    height: .5em;\n    top: .1em;\n    width: 0.1rem; }\n\n.icon-refresh::before {\n  border: 0.1rem solid currentColor;\n  border-radius: 50%;\n  border-right-color: transparent;\n  content: \"\";\n  height: 1em;\n  width: 1em; }\n\n.icon-refresh::after {\n  border: .2em solid currentColor;\n  border-top-color: transparent;\n  border-left-color: transparent;\n  content: \"\";\n  height: 0;\n  left: 80%;\n  top: 20%;\n  width: 0; }\n\n.icon-search::before {\n  border: 0.1rem solid currentColor;\n  border-radius: 50%;\n  content: \"\";\n  height: .75em;\n  left: 5%;\n  top: 5%;\n  transform: translate(0, 0) rotate(45deg);\n  width: .75em; }\n\n.icon-search::after {\n  background: currentColor;\n  content: \"\";\n  height: 0.1rem;\n  left: 80%;\n  top: 80%;\n  transform: translate(-50%, -50%) rotate(45deg);\n  width: .4em; }\n\n.icon-edit::before {\n  border: 0.1rem solid currentColor;\n  content: \"\";\n  height: .4em;\n  transform: translate(-40%, -60%) rotate(-45deg);\n  width: .85em; }\n\n.icon-edit::after {\n  border: .15em solid currentColor;\n  border-top-color: transparent;\n  border-right-color: transparent;\n  content: \"\";\n  height: 0;\n  left: 5%;\n  top: 95%;\n  transform: translate(0, -100%);\n  width: 0; }\n\n.icon-delete::before {\n  border: 0.1rem solid currentColor;\n  border-bottom-left-radius: 0.1rem;\n  border-bottom-right-radius: 0.1rem;\n  border-top: 0;\n  content: \"\";\n  height: .75em;\n  top: 60%;\n  width: .75em; }\n\n.icon-delete::after {\n  background: currentColor;\n  box-shadow: -.25em .2em, .25em .2em;\n  content: \"\";\n  height: 0.1rem;\n  top: 0.05rem;\n  width: .5em; }\n\n.icon-share {\n  border: 0.1rem solid currentColor;\n  border-radius: 0.1rem;\n  border-right: 0;\n  border-top: 0; }\n  .icon-share::before {\n    border: 0.1rem solid currentColor;\n    border-left: 0;\n    border-top: 0;\n    content: \"\";\n    height: .4em;\n    left: 100%;\n    top: .25em;\n    transform: translate(-125%, -50%) rotate(-45deg);\n    width: .4em; }\n  .icon-share::after {\n    border: 0.1rem solid currentColor;\n    border-bottom: 0;\n    border-right: 0;\n    border-radius: 75% 0;\n    content: \"\";\n    height: .5em;\n    width: .6em; }\n\n.icon-flag::before {\n  background: currentColor;\n  content: \"\";\n  height: 1em;\n  left: 15%;\n  width: 0.1rem; }\n\n.icon-flag::after {\n  border: 0.1rem solid currentColor;\n  border-bottom-right-radius: 0.1rem;\n  border-left: 0;\n  border-top-right-radius: 0.1rem;\n  content: \"\";\n  height: .65em;\n  top: 35%;\n  left: 60%;\n  width: .8em; }\n\n.icon-bookmark::before {\n  border: 0.1rem solid currentColor;\n  border-bottom: 0;\n  border-top-left-radius: 0.1rem;\n  border-top-right-radius: 0.1rem;\n  content: \"\";\n  height: .9em;\n  width: .8em; }\n\n.icon-bookmark::after {\n  border: 0.1rem solid currentColor;\n  border-bottom: 0;\n  border-left: 0;\n  border-radius: 0.1rem;\n  content: \"\";\n  height: .5em;\n  transform: translate(-50%, 35%) rotate(-45deg) skew(15deg, 15deg);\n  width: .5em; }\n\n.icon-download,\n.icon-upload {\n  border-bottom: 0.1rem solid currentColor; }\n  .icon-download::before,\n  .icon-upload::before {\n    border: 0.1rem solid currentColor;\n    border-bottom: 0;\n    border-right: 0;\n    content: \"\";\n    height: .5em;\n    width: .5em;\n    transform: translate(-50%, -60%) rotate(-135deg); }\n  .icon-download::after,\n  .icon-upload::after {\n    background: currentColor;\n    content: \"\";\n    height: .6em;\n    top: 40%;\n    width: 0.1rem; }\n\n.icon-upload::before {\n  transform: translate(-50%, -60%) rotate(45deg); }\n\n.icon-upload::after {\n  top: 50%; }\n\n.icon-time {\n  border: 0.1rem solid currentColor;\n  border-radius: 50%; }\n  .icon-time::before {\n    background: currentColor;\n    content: \"\";\n    height: .4em;\n    transform: translate(-50%, -75%);\n    width: 0.1rem; }\n  .icon-time::after {\n    background: currentColor;\n    content: \"\";\n    height: .3em;\n    transform: translate(-50%, -75%) rotate(90deg);\n    transform-origin: 50% 90%;\n    width: 0.1rem; }\n\n.icon-mail::before {\n  border: 0.1rem solid currentColor;\n  border-radius: 0.1rem;\n  content: \"\";\n  height: .8em;\n  width: 1em; }\n\n.icon-mail::after {\n  border: 0.1rem solid currentColor;\n  border-right: 0;\n  border-top: 0;\n  content: \"\";\n  height: .5em;\n  transform: translate(-50%, -90%) rotate(-45deg) skew(10deg, 10deg);\n  width: .5em; }\n\n.icon-people::before {\n  border: 0.1rem solid currentColor;\n  border-radius: 50%;\n  content: \"\";\n  height: .45em;\n  top: 25%;\n  width: .45em; }\n\n.icon-people::after {\n  border: 0.1rem solid currentColor;\n  border-radius: 50% 50% 0 0;\n  content: \"\";\n  height: .4em;\n  top: 75%;\n  width: .9em; }\n\n.icon-message {\n  border: 0.1rem solid currentColor;\n  border-bottom: 0;\n  border-radius: 0.1rem;\n  border-right: 0; }\n  .icon-message::before {\n    border: 0.1rem solid currentColor;\n    border-bottom-right-radius: 0.1rem;\n    border-left: 0;\n    border-top: 0;\n    content: \"\";\n    height: .8em;\n    left: 65%;\n    top: 40%;\n    width: .7em; }\n  .icon-message::after {\n    background: currentColor;\n    border-radius: 0.1rem;\n    content: \"\";\n    height: .3em;\n    left: 10%;\n    top: 100%;\n    transform: translate(0, -90%) rotate(45deg);\n    width: 0.1rem; }\n\n.icon-photo {\n  border: 0.1rem solid currentColor;\n  border-radius: 0.1rem; }\n  .icon-photo::before {\n    border: 0.1rem solid currentColor;\n    border-radius: 50%;\n    content: \"\";\n    height: .25em;\n    left: 35%;\n    top: 35%;\n    width: .25em; }\n  .icon-photo::after {\n    border: 0.1rem solid currentColor;\n    border-bottom: 0;\n    border-left: 0;\n    content: \"\";\n    height: .5em;\n    left: 60%;\n    transform: translate(-50%, 25%) rotate(-45deg);\n    width: .5em; }\n\n.icon-link::before, .icon-link::after {\n  border: 0.1rem solid currentColor;\n  border-radius: 5em 0 0 5em;\n  border-right: 0;\n  content: \"\";\n  height: .5em;\n  width: .75em; }\n\n.icon-link::before {\n  transform: translate(-70%, -45%) rotate(-45deg); }\n\n.icon-link::after {\n  transform: translate(-30%, -55%) rotate(135deg); }\n\n.icon-location::before {\n  border: 0.1rem solid currentColor;\n  border-radius: 50% 50% 50% 0;\n  content: \"\";\n  height: .8em;\n  transform: translate(-50%, -60%) rotate(-45deg);\n  width: .8em; }\n\n.icon-location::after {\n  border: 0.1rem solid currentColor;\n  border-radius: 50%;\n  content: \"\";\n  height: .2em;\n  transform: translate(-50%, -80%);\n  width: .2em; }\n\n.icon-emoji {\n  border: 0.1rem solid currentColor;\n  border-radius: 50%; }\n  .icon-emoji::before {\n    border-radius: 50%;\n    box-shadow: -.17em -.15em, .17em -.15em;\n    content: \"\";\n    height: .1em;\n    width: .1em; }\n  .icon-emoji::after {\n    border: 0.1rem solid currentColor;\n    border-bottom-color: transparent;\n    border-radius: 50%;\n    border-right-color: transparent;\n    content: \"\";\n    height: .5em;\n    transform: translate(-50%, -40%) rotate(-135deg);\n    width: .5em; }\n", ""]);
+
+// exports
+
 
 /***/ })
 /******/ ])));

@@ -3,6 +3,6 @@ html, body {
 	font-weight: 400;
 }
 
-h1 {
-	text-align: center;
+section{
+	margin-bottom:80px;
 }
