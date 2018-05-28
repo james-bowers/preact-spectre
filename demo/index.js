@@ -1,6 +1,7 @@
 import './style';
 import {
-	Button, Card, Checkbox, Img, Form, TextArea, Icon, Menu, Switch, TextInput, Grid //  Icon, Select, Radio
+	Button, Card, Checkbox, Img, Form, TextArea, Icon,
+	Menu, Switch, TextInput, Grid, Tile, Tooltip, Header, Anchor //  Icon, Select, Radio
 } from 'preact-spectre';
 
 export default function render(){
@@ -64,8 +65,15 @@ export default function render(){
 			<section>
 				<h2>Menu</h2>
 				<Menu.Container>
-					<Menu.Item>Hello</Menu.Item>
-					<Menu.Divider text="divider text" />
+					<Menu.Item>
+						<Tile.Container compact>
+							<Tile.IconWrapper>
+								<Icon.Icon people />
+							</Tile.IconWrapper>
+							<Tile.Content title="James Bowers" />
+						</Tile.Container>
+					</Menu.Item>
+					<Menu.Divider />
 					<Menu.Item>Bonjour</Menu.Item>
 					<Menu.Item>Cya</Menu.Item>
 					<Menu.Item>Chow</Menu.Item>
@@ -97,6 +105,71 @@ export default function render(){
 						</div>
 					</Grid.Column>
 				</Grid.Container>
+			</section>
+			<section>
+				<h2>Tile</h2>
+				<h5>Normal</h5>
+				<Tile.Container>
+					<Tile.IconWrapper>
+						<Icon.Icon people />
+					</Tile.IconWrapper>
+					<Tile.Content title="James Bowers" subtitle="Owner" />
+					<Tile.Action>
+						<Button.Button link>
+							<Icon.Icon moreVert />
+						</Button.Button>
+					</Tile.Action>
+				</Tile.Container>
+				<h5>Compact</h5>
+				<Tile.Container compact>
+					<Tile.IconWrapper>
+						<Icon.Icon people />
+					</Tile.IconWrapper>
+					<Tile.Content title="James Bowers" subtitle="Owner" />
+					<Tile.Action>
+						<Button.Button link>
+							<Icon.Icon moreVert />
+						</Button.Button>
+					</Tile.Action>
+				</Tile.Container>
+			</section>
+			<section>
+				<h2>Tooltip</h2>
+				<Tooltip.Wrapper text="hello there - right!" right>
+					<Button.Button>tooltip right</Button.Button>
+				</Tooltip.Wrapper>
+				<Tooltip.Wrapper text="hello there - left!" left>
+					<Button.Button>tooltip left</Button.Button>
+				</Tooltip.Wrapper>
+				<Tooltip.Wrapper text="hello there - top!" top>
+					<Button.Button>tooltip top</Button.Button>
+				</Tooltip.Wrapper>
+				<Tooltip.Wrapper text="hello there - bottom!" bottom>
+					<Button.Button>tooltip bottom</Button.Button>
+				</Tooltip.Wrapper>
+			</section>
+			<section>
+				<h2>Header</h2>
+				<Header.Container>
+					<Header.Section>
+						<Anchor href="#">
+							<Button.Button link>One</Button.Button>
+						</Anchor>
+						<Anchor href="#">
+							<Button.Button link>Two</Button.Button>
+						</Anchor>
+					</Header.Section>
+					<Header.Section centered>
+						<Anchor href="#">link one</Anchor>
+					</Header.Section>
+					<Header.Section>
+						<Anchor href="#">
+							<Button.Button link>
+								<Icon.Icon menu />
+							</Button.Button>
+						</Anchor>
+					</Header.Section>
+				</Header.Container>
 			</section>
 		</div>
 		

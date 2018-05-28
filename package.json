@@ -1,6 +1,6 @@
 {
   "name": "preact-spectre",
-  "version": "1.0.20",
+  "version": "1.0.26",
   "description": "",
   "main": "dist/bundle.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "preact": "^8.2.9",
+    "preact-router": "^2.6.1",
     "spectre.css": "^0.5.1",
     "webpack": "^3.12.0"
   },
