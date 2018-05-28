@@ -1,5 +1,4 @@
-import '../node_modules/spectre.css/src/spectre.scss'
-import '../node_modules/spectre.css/src/spectre-icons.scss'
+import '../style/index.scss'
 
 import * as Button from './components/button'
 import * as Card from './components/card'
@@ -12,11 +11,17 @@ import * as Radio from './components/radio'
 import * as Switch from './components/switch'
 import * as TextArea from './components/textarea'
 import * as Menu from './components/menu'
+import * as TextInput from './components/textInput'
+import * as Grid from './components/grid'
 
 export {
-	Button, Card, Checkbox, Img, Form, Icon, Select, Radio, Switch, TextArea, Menu
+	Button, Card, Checkbox, Img, Form, Icon, 
+	Select, Radio, Switch, TextArea, Menu, TextInput,
+	Grid
 }
 
 export default {
-	Button, Card, Form, Checkbox, Img, Icon, Select, Radio, Switch, TextArea, Menu
+	Button, Card, Form, Checkbox, Img, Icon, 
+	Select, Radio, Switch, TextArea, Menu, TextInput,
+	Grid
 }

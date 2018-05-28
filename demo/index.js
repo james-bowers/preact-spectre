@@ -1,10 +1,23 @@
 import './style';
 import {
-	Button, Card, Checkbox, Img, Form, TextArea, Icon, Menu, Switch //  Icon, Select, Radio
+	Button, Card, Checkbox, Img, Form, TextArea, Icon, Menu, Switch, TextInput, Grid //  Icon, Select, Radio
 } from 'preact-spectre';
 
 export default function render(){
-	console.log('TextArea', TextArea);
+
+	let card = (<Card.Container>
+		<Card.ImageContainer>
+			<Img.Img src="https://ticketbuddy.co.uk/static/logo/blue_1024.png" />
+		</Card.ImageContainer>
+		<Card.Header title="Title" subtitle="subtitle" />
+		<Card.Body>
+			<p>This is the main content of the card component.</p>
+		</Card.Body>
+		<Card.Footer>
+			<Button.Button full>Tickets</Button.Button>
+		</Card.Footer>
+	</Card.Container>);
+
 	return (
 		<div>
 			<section>
@@ -26,23 +39,18 @@ export default function render(){
 			</section>
 			<section>
 				<h2>Cards</h2>
-				<Card.Container>
-					<Card.ImageContainer>
-						<Img.Img src="https://ticketbuddy.co.uk/static/logo/blue_1024.png" />
-					</Card.ImageContainer>
-					<Card.Header title="Title" subtitle="subtitle" />
-					<Card.Body>
-						<p>This is the main content of the card component.</p>
-					</Card.Body>
-				</Card.Container>
+				{card}
 			</section>
 			<section>
 				<h2>Form elements</h2>
 				<Form.Group>
+					<TextInput.TextInput name="checkbox" value="my text input value" />
+				</Form.Group>
+				<Form.Group>
 					<Checkbox.Checkbox name="checkbox" label="my checkbox" />
 				</Form.Group>
 				<Form.Group>
-					<TextArea.TextArea name="textarea" placeholder="my textbox" />
+					<TextArea.TextArea name="textarea" placeholder="my textbox" value="text value" />
 				</Form.Group>
 				<Form.Group>
 					<Switch.Switch name="my-switch" label="on or off!?" />
@@ -69,6 +77,26 @@ export default function render(){
 					<Menu.BadgeItem badgeText="5">Cya</Menu.BadgeItem>
 					<Menu.Item>Chow</Menu.Item>
 				</Menu.Container>
+			</section>
+			<section>
+				<h2>Grid</h2>
+				<Grid.Container>
+					<Grid.Column class="p-1" small="12" medium="6" large="4">
+						<div style={{ background: 'red' }}>
+							{card}
+						</div>
+					</Grid.Column>
+					<Grid.Column class="p-1" small="12" medium="6" large="4">
+						<div style={{ background: 'red' }}>
+							{card}
+						</div>
+					</Grid.Column>
+					<Grid.Column class="p-1" small="12" medium="6" large="4">
+						<div style={{ background: 'red' }}>
+							{card}
+						</div>
+					</Grid.Column>
+				</Grid.Container>
 			</section>
 		</div>
 		
