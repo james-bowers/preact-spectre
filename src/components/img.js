@@ -7,5 +7,5 @@ export let Img = (props) => {
 		cover: 'img-fit-cover'
 	})
 
-	return <img src={props.src} class={classes.join(' ')} alt={props.alt} />
+	return <img height={props.height} width={props.width} src={props.src} class={classes.join(' ')} alt={props.alt} />
 }
