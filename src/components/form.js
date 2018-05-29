@@ -1,6 +1,7 @@
 import { h } from 'preact'
 import * as helper from './helper'
 import { Button } from './button'
+import * as Grid from './grid'
 
 export let Group = (props) => {
 	return (
@@ -32,6 +33,17 @@ export let getFormValues = (formId) => {
 	return values
 }
 
+export let Horizontal = (props) => (
+	<Grid.Container>
+		<Grid.Column small="12" fallback="3">
+			{props.renderLabel()}
+		</Grid.Column>
+		<Grid.Column small="12" fallback="9">
+			{props.renderInput()}
+		</Grid.Column>
+	</Grid.Container>
+)
+
 export let Container = (props) => {
 
 	let onSubmit = () => {
@@ -44,7 +56,7 @@ export let Container = (props) => {
 			<div>
 				{props.children}
 			</div>
-			{props.submitTxt && <Button onClick={onSubmit}>{props.submitTxt}</Button>}
+			{props.submitTxt && <Button class='centered' onClick={onSubmit}>{props.submitTxt}</Button>}
 		</div>
 	)
 }
