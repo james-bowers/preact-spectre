@@ -24,11 +24,33 @@ export default function render(){
 		<div>
 			<section>
 				<h2>Modal</h2>
-				<a href="#example-modal">Show modal</a>
+				<a href="#example-modal">Show default modal</a>
+				<br />
+				<a href="#example-modal-small">Show small modal</a>
+				<br />
+				<a href="#example-modal-large">Show large modal</a>
 				<Modal.Container id="example-modal">
 					<Modal.Header title="This is the example modal!" />
 					<Modal.Body>
 						<p>This is some content in the modal!</p>
+					</Modal.Body>
+					<Modal.Footer>
+						<Button.Button><Icon.Icon people /> people!</Button.Button>
+					</Modal.Footer>
+				</Modal.Container>
+				<Modal.Container small id="example-modal-small">
+					<Modal.Header title="This is the example modal!" />
+					<Modal.Body>
+						<p>This is a small modal!</p>
+					</Modal.Body>
+					<Modal.Footer>
+						<Button.Button><Icon.Icon people /> people!</Button.Button>
+					</Modal.Footer>
+				</Modal.Container>
+				<Modal.Container large id="example-modal-large">
+					<Modal.Header title="This is the example modal!" />
+					<Modal.Body>
+						<p>This is a large modal!</p>
 					</Modal.Body>
 					<Modal.Footer>
 						<Button.Button><Icon.Icon people /> people!</Button.Button>

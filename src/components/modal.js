@@ -1,4 +1,5 @@
 import { h } from 'preact'
+import * as helper from './helper'
 
 export let Header = (props) => (
 	<div class="modal-header">
@@ -13,20 +14,28 @@ export let Footer = (props) => <div class="modal-footer">{props.children}</div>
 
 export let Container = (props) => {
 
+	let classes = helper.buildClassList(props, ['modal'], {
+		small: 'modal-sm',
+		large: 'modal-lg'
+	})
+
 	window.onhashchange = () => {
 		let hash = window.location.hash
 
-		let classes = ['modal']
+		let newClasses = [...classes]
 
 		if(hash === `#${props.id}`){
-			classes.push('active')
+			newClasses.push('active')
 		}
 
-		document.getElementById(hash).className = classes.join(' ');
+		let modal = document.getElementById(hash)
+		if(modal){
+			modal.className = newClasses.join(' ');
+		}
 	}
 
 	return (
-		<div class="modal" id={props.id}>
+		<div class={classes.join(' ')} id={props.id}>
 			<a href={`#close`} class="modal-overlay" aria-label="Close"></a>
 			<div class="modal-container">
 				{props.children}
