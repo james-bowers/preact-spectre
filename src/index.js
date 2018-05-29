@@ -16,17 +16,16 @@ import * as Grid from './components/grid'
 import * as Tile from './components/tile'
 import * as Tooltip from './components/tooltip'
 import * as Empty from './components/empty'
-import Anchor from './components/anchor'
 import * as Header from './components/header'
 
 export {
 	Button, Card, Checkbox, Img, Form, Icon, 
 	Select, Radio, Switch, TextArea, Menu, TextInput,
-	Grid, Tile, Tooltip, Empty, Header, Anchor
+	Grid, Tile, Tooltip, Empty, Header
 }
 
 export default {
 	Button, Card, Form, Checkbox, Img, Icon, 
 	Select, Radio, Switch, TextArea, Menu, TextInput,
-	Grid, Tile, Tooltip, Empty, Header, Anchor
+	Grid, Tile, Tooltip, Empty, Header
 }
