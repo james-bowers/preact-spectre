@@ -17,15 +17,16 @@ import * as Tile from './components/tile'
 import * as Tooltip from './components/tooltip'
 import * as Empty from './components/empty'
 import * as Header from './components/header'
+import * as Modal from './components/modal'
 
 export {
 	Button, Card, Checkbox, Img, Form, Icon, 
 	Select, Radio, Switch, TextArea, Menu, TextInput,
-	Grid, Tile, Tooltip, Empty, Header
+	Grid, Tile, Tooltip, Empty, Header, Modal
 }
 
 export default {
 	Button, Card, Form, Checkbox, Img, Icon, 
 	Select, Radio, Switch, TextArea, Menu, TextInput,
-	Grid, Tile, Tooltip, Empty, Header
+	Grid, Tile, Tooltip, Empty, Header, Modal
 }

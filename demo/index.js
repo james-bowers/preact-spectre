@@ -1,7 +1,8 @@
 import './style';
 import {
 	Button, Card, Checkbox, Img, Form, TextArea, Icon,
-	Menu, Switch, TextInput, Grid, Tile, Tooltip, Header, Anchor //  Icon, Select, Radio
+	Menu, Switch, TextInput, Grid, Tile, Tooltip, Header, Anchor,
+	Modal
 } from 'preact-spectre';
 
 export default function render(){
@@ -21,6 +22,19 @@ export default function render(){
 
 	return (
 		<div>
+			<section>
+				<h2>Modal</h2>
+				<a href="#example-modal">Show modal</a>
+				<Modal.Container id="example-modal">
+					<Modal.Header title="This is the example modal!" />
+					<Modal.Body>
+						<p>This is some content in the modal!</p>
+					</Modal.Body>
+					<Modal.Footer>
+						<Button.Button><Icon.Icon people /> people!</Button.Button>
+					</Modal.Footer>
+				</Modal.Container>
+			</section>
 			<section>
 				<h2>Buttons</h2>
 				<Button.Button>default</Button.Button>
