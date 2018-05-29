@@ -3,6 +3,17 @@ import * as helper from './helper'
 import { Button } from './button'
 import * as Grid from './grid'
 
+export let Horizontal = (props) => (
+	<Grid.Container>
+		<Grid.Column small="12" fallback="3">
+			{props.renderLabel()}
+		</Grid.Column>
+		<Grid.Column small="12" fallback="9">
+			{props.renderInput()}
+		</Grid.Column>
+	</Grid.Container>
+)
+
 export let Group = (props) => {
 	return (
 		<div class="form-group">
@@ -32,17 +43,6 @@ export let getFormValues = (formId) => {
 
 	return values
 }
-
-export let Horizontal = (props) => (
-	<Grid.Container>
-		<Grid.Column small="12" fallback="3">
-			{props.renderLabel()}
-		</Grid.Column>
-		<Grid.Column small="12" fallback="9">
-			{props.renderInput()}
-		</Grid.Column>
-	</Grid.Container>
-)
 
 export let Container = (props) => {
 
