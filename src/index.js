@@ -20,15 +20,20 @@ import * as Header from './components/header'
 import * as Modal from './components/modal'
 import * as Breadcrumb from './components/breadcrumb'
 import * as Toast from './components/toast'
+import Calendar from './components/time/calendar'
+import Time from './components/time/time.js'
+import DateTimeInput from './components/time/input'
 
 export {
 	Button, Card, Checkbox, Img, Form, Icon, 
 	Select, Radio, Switch, TextArea, Menu, TextInput,
-	Grid, Tile, Tooltip, Empty, Header, Modal, Breadcrumb, Toast
+	Grid, Tile, Tooltip, Empty, Header, Modal, Breadcrumb, 
+	Toast, Calendar, Time, DateTimeInput
 }
 
 export default {
 	Button, Card, Form, Checkbox, Img, Icon, 
 	Select, Radio, Switch, TextArea, Menu, TextInput,
-	Grid, Tile, Tooltip, Empty, Header, Modal, Breadcrumb, Toast
+	Grid, Tile, Tooltip, Empty, Header, Modal, Breadcrumb, 
+	Toast, Calendar, Time, DateTimeInput
 }

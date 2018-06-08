@@ -19,7 +19,8 @@ export let Toast = (props) => {
 	let id = Math.floor(Math.random() * Math.floor(1000000));
 
 	let removeToast = () => {
-		document.getElementById(id).remove()
+		let toast = document.getElementById(id)
+		if(toast) toast.remove()
 	}
 
 	// default to remove after 15 seconds

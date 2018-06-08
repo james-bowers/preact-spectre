@@ -2,8 +2,8 @@ import './style';
 import {
 	Button, Card, Checkbox, Img, Form, TextArea, Icon,
 	Menu, Switch, TextInput, Grid, Tile, Tooltip, Header, Anchor,
-	Modal, Toast
-} from '@ticketbuddy/preact-spectre';
+	Modal, Toast, Calendar, Time, DateTimeInput
+} from '../dist/bundle.js';
 
 export default function render(){
 
@@ -219,17 +219,19 @@ export default function render(){
 				</Header.Container>
 			</section>
 			<section>
-
-				<Toast.Wrapper>
-					<Button.Button onClick={addToast}
-					>show toast</Button.Button>
-					<Toast.Toast>
-						<h5>Hello</h5>
-						<p>This is a toast</p>
-					</Toast.Toast>
-				</Toast.Wrapper>
+				<h2>Toast</h2>
+				<Button.Button onClick={addToast}>show toast</Button.Button>
+				<Toast.Wrapper />
+			</section>
+			<section>
+				<h2>Calendar</h2>
+				<Calendar />
+				<Time onChange={(timeValues) => console.log('timeValues', timeValues)} />
+			</section>
+			<section>
+				<h2>Date time input</h2>
+				<DateTimeInput name="datetime" />
 			</section>
 		</div>
-		
 	);
 }

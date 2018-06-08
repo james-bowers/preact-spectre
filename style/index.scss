@@ -15,8 +15,8 @@ $dark-color: #2b4f76;
 }
 
 @include keyframes(slide-up-and-in) {
-  0%   { @include translate(0,0); opacity: .4; }
-  100% { @include translate(50,0); opacity: 1; }
+  0%   { opacity: .4; }
+  100% { opacity: 1; }
 }
 
 #toast-wrapper .toast {
@@ -27,3 +27,4 @@ $dark-color: #2b4f76;
 // Import full Spectre source code
 @import "node_modules/spectre.css/src/spectre.scss";
 @import "node_modules/spectre.css/src/spectre-icons.scss";
+@import "calendars.scss";

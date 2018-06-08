@@ -1,6 +1,6 @@
 import { h } from 'preact'
 import * as helper from './helper'
 
-let Option = (props) => <option value={props.value}>{props.children}</option>
+export let Option = (props) => <option value={props.value}>{props.children}</option>
 
-let Select = (props) => <select class="form-select">{props.children}</select>
+export let Select = (props) => <select onChange={props.onChange} class="form-select">{props.children}</select>
