@@ -1,9 +1,10 @@
 {
-  "name": "preact-spectre",
-  "version": "1.0.38",
+  "name": "@ticketbuddy/preact-spectre",
+  "version": "1.0.9",
   "description": "",
   "main": "dist/bundle.js",
   "scripts": {
+    "prepublish": "npm run build",
     "build": "webpack -p"
   },
   "author": "",

@@ -19,7 +19,7 @@ export let Container = (props) => {
 		large: 'modal-lg'
 	})
 
-	window.onhashchange = () => {
+	let checkOpenModalHash = () => {
 		let hash = window.location.hash
 
 		let newClasses = [...classes]
@@ -33,6 +33,12 @@ export let Container = (props) => {
 			modal.className = newClasses.join(' ');
 		}
 	}
+
+	window.onhashchange = checkOpenModalHash
+
+	// also call to see if the page has 
+	// loaded with a hash value to open the modal
+	checkOpenModalHash()
 
 	return (
 		<div class={classes.join(' ')} id={props.id}>

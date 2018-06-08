@@ -18,15 +18,17 @@ import * as Tooltip from './components/tooltip'
 import * as Empty from './components/empty'
 import * as Header from './components/header'
 import * as Modal from './components/modal'
+import * as Breadcrumb from './components/breadcrumb'
+import * as Toast from './components/toast'
 
 export {
 	Button, Card, Checkbox, Img, Form, Icon, 
 	Select, Radio, Switch, TextArea, Menu, TextInput,
-	Grid, Tile, Tooltip, Empty, Header, Modal
+	Grid, Tile, Tooltip, Empty, Header, Modal, Breadcrumb, Toast
 }
 
 export default {
 	Button, Card, Form, Checkbox, Img, Icon, 
 	Select, Radio, Switch, TextArea, Menu, TextInput,
-	Grid, Tile, Tooltip, Empty, Header, Modal
+	Grid, Tile, Tooltip, Empty, Header, Modal, Breadcrumb, Toast
 }

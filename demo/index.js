@@ -2,13 +2,24 @@ import './style';
 import {
 	Button, Card, Checkbox, Img, Form, TextArea, Icon,
 	Menu, Switch, TextInput, Grid, Tile, Tooltip, Header, Anchor,
-	Modal
-} from 'preact-spectre';
+	Modal, Toast
+} from '@ticketbuddy/preact-spectre';
 
 export default function render(){
 
+	function addToast(){
+		Toast.showToast({
+			children: (
+				<div>
+					<h5>A message!</h5>
+					<p>yo yo yo</p>
+				</div>
+			)
+		});
+	}
+
 	let card = (<Card.Container>
-		<Card.ImageContainer>
+		<Card.ImageContainer height="200px">
 			<Img.Img src="https://ticketbuddy.co.uk/static/logo/blue_1024.png" />
 		</Card.ImageContainer>
 		<Card.Header title="Title" subtitle="subtitle" />
@@ -206,6 +217,17 @@ export default function render(){
 						</Anchor>
 					</Header.Section>
 				</Header.Container>
+			</section>
+			<section>
+
+				<Toast.Wrapper>
+					<Button.Button onClick={addToast}
+					>show toast</Button.Button>
+					<Toast.Toast>
+						<h5>Hello</h5>
+						<p>This is a toast</p>
+					</Toast.Toast>
+				</Toast.Wrapper>
 			</section>
 		</div>
 		
