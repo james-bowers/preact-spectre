@@ -91,18 +91,26 @@ export default function render(){
 			</section>
 			<section>
 				<h2>Form elements</h2>
-				<Form.Group>
-					<TextInput.TextInput name="checkbox" value="my text input value" />
-				</Form.Group>
-				<Form.Group>
-					<Checkbox.Checkbox name="checkbox" label="my checkbox" />
-				</Form.Group>
-				<Form.Group>
-					<TextArea.TextArea name="textarea" placeholder="my textbox" value="text value" />
-				</Form.Group>
-				<Form.Group>
-					<Switch.Switch name="my-switch" label="on or off!?" />
-				</Form.Group>
+				<Form.Container id="example-form" submitTxt="save" onSubmit={(values) => console.log(values)}>
+					<Form.Group>
+						<TextInput.TextInput name="checkbox" value="my text input value" />
+					</Form.Group>
+					<Form.Group>
+						<Checkbox.Checkbox name="checkbox" label="my checkbox (value isfalse)" value={false} />
+					</Form.Group>
+					<Form.Group>
+						<Checkbox.Checkbox name="checkbox" label="my checkbox (value istrue)" value={true} />
+					</Form.Group>
+					<Form.Group>
+						<TextArea.TextArea name="textarea" placeholder="my textbox" value="text value" />
+					</Form.Group>
+					<Form.Group>
+						<Switch.Switch name="my-switch" label="off!?" />
+					</Form.Group>
+					<Form.Group>
+						<Switch.Switch name="my-switch-default-on" label="on!?" value={true} />
+					</Form.Group>
+				</Form.Container>
 			</section>
 			<section>
 				<h2>Icons</h2>
