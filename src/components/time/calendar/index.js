@@ -9,7 +9,7 @@ export default class Calendar extends Component {
         let date = props.date || new Date()
 
         this.state = {
-            selectedDate: undefined,
+            selectedDate: date,
             month: date.getMonth(),
             year: date.getFullYear()
         }

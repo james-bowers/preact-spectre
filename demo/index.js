@@ -233,7 +233,7 @@ export default function render(){
 				<DateTimeInput name="datetime" />
 				<Card.Container>
 					<Card.Body>
-						<ModalDateTimeInput name="datetime-2">
+						<ModalDateTimeInput value={new Date('2018-07-17T03:25:00')} name="datetime-2">
 							<Button.Button>Change date!</Button.Button>
 						</ModalDateTimeInput>
 					</Card.Body>

@@ -9,7 +9,7 @@ export default class DateTimeInput extends Component {
 		super(props)
 
 		this.state = {
-			date: props.date || new Date()	 
+			date: props.value || new Date()	 
 		}
 	}
 
@@ -37,8 +37,8 @@ export default class DateTimeInput extends Component {
 	render = (props) => {
 		return (
 			<div>
-				<Time value={this.state.date} onChange={this.onTimeChange} />
-				<Calendar value={this.state.date} onDatePicked={this.onDateChange} />
+				<Time date={this.state.date} onChange={this.onTimeChange} />
+				<Calendar date={this.state.date} onDatePicked={this.onDateChange} />
 				<input type='hidden' name={props.name} value={this.state.date.toISOString()} />
 			</div>
 		)
