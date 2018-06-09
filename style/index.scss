@@ -25,6 +25,6 @@ $dark-color: #2b4f76;
 }
 
 // Import full Spectre source code
-@import "node_modules/spectre.css/src/spectre.scss";
-@import "node_modules/spectre.css/src/spectre-icons.scss";
-@import "calendars.scss";
+@import "./spectre/spectre-exp.scss";
+@import "./spectre/spectre-icons.scss";
+@import "./spectre/spectre.scss";

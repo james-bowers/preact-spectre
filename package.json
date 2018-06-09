@@ -1,6 +1,6 @@
 {
   "name": "@ticketbuddy/preact-spectre",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "",
   "main": "dist/bundle.js",
   "scripts": {
@@ -12,7 +12,6 @@
   "dependencies": {
     "preact": "^8.2.9",
     "preact-router": "^2.6.1",
-    "spectre.css": "^0.5.1",
     "webpack": "^3.12.0"
   },
   "devDependencies": {

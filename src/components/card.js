@@ -24,7 +24,7 @@ export let Footer = (props) => (
 
 export let Container = (props) => {
 	return (
-		<div class="card menu" style={{border: 0}}>
+		<div class="card" style={{border: 0}}>
 			{props.children}
 		</div>
 	)

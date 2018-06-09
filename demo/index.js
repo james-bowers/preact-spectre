@@ -231,9 +231,15 @@ export default function render(){
 			<section>
 				<h2>Date time input</h2>
 				<DateTimeInput name="datetime" />
-				<ModalDateTimeInput name="datetime-2">
-					<Button.Button>Change date!</Button.Button>
-				</ModalDateTimeInput>
+				<Card.Container>
+					<Card.Body>
+						<ModalDateTimeInput name="datetime-2">
+							<Button.Button>Change date!</Button.Button>
+						</ModalDateTimeInput>
+					</Card.Body>
+				</Card.Container>
+
+				
 			</section>
 		</div>
 	);
