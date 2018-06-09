@@ -32,10 +32,10 @@ export default class Time extends Component {
 			<Grid.Container>
 				<Grid.Column small="12" fallback="6">
 					<Grid.Container>
-						<Grid.Column small="12" fallback="2">
+						<Grid.Column small="12" fallback="4">
 							<Form.Label>Hours</Form.Label>
 						</Grid.Column>
-						<Grid.Column small="12" fallback="10">
+						<Grid.Column small="12" fallback="8">
 							<Select.Select onChange={onTimeChange.bind(null, 'hours')}>
 								{hourOptions}
 							</Select.Select>
@@ -44,10 +44,10 @@ export default class Time extends Component {
 				</Grid.Column>
 				<Grid.Column small="12" fallback="6">
 					<Grid.Container>
-						<Grid.Column small="12" fallback="2">
+						<Grid.Column small="12" fallback="4">
 							<Form.Label>Minutes</Form.Label>
 						</Grid.Column>
-						<Grid.Column small="12" fallback="10">
+						<Grid.Column small="12" fallback="8">
 							<Select.Select onChange={onTimeChange.bind(null, 'minutes')}>
 								{minuteOptions}
 							</Select.Select>

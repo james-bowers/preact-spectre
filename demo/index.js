@@ -2,7 +2,7 @@ import './style';
 import {
 	Button, Card, Checkbox, Img, Form, TextArea, Icon,
 	Menu, Switch, TextInput, Grid, Tile, Tooltip, Header, Anchor,
-	Modal, Toast, Calendar, Time, DateTimeInput
+	Modal, Toast, Calendar, Time, DateTimeInput, ModalDateTimeInput
 } from '../dist/bundle.js';
 
 export default function render(){
@@ -231,6 +231,9 @@ export default function render(){
 			<section>
 				<h2>Date time input</h2>
 				<DateTimeInput name="datetime" />
+				<ModalDateTimeInput name="datetime-2">
+					<Button.Button>Change date!</Button.Button>
+				</ModalDateTimeInput>
 			</section>
 		</div>
 	);

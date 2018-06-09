@@ -23,17 +23,18 @@ import * as Toast from './components/toast'
 import Calendar from './components/time/calendar'
 import Time from './components/time/time.js'
 import DateTimeInput from './components/time/input'
+import ModalDateTimeInput from './components/time/modalInput'
 
 export {
 	Button, Card, Checkbox, Img, Form, Icon, 
 	Select, Radio, Switch, TextArea, Menu, TextInput,
 	Grid, Tile, Tooltip, Empty, Header, Modal, Breadcrumb, 
-	Toast, Calendar, Time, DateTimeInput
+	Toast, Calendar, Time, DateTimeInput, ModalDateTimeInput
 }
 
 export default {
 	Button, Card, Form, Checkbox, Img, Icon, 
 	Select, Radio, Switch, TextArea, Menu, TextInput,
 	Grid, Tile, Tooltip, Empty, Header, Modal, Breadcrumb, 
-	Toast, Calendar, Time, DateTimeInput
+	Toast, Calendar, Time, DateTimeInput, ModalDateTimeInput
 }
