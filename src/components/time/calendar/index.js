@@ -48,11 +48,28 @@ export default class Calendar extends Component {
         this.forceUpdate()
     }
 
+    componentWillReceiveProps(nextProps){
+        this.setState({ date: nextProps.date })
+    }
+
+    getTooltips = () => {
+        let tooltips = [...this.props.tooltips || []]
+
+        if(this.state.selectedDate){
+            tooltips.push({
+                date: this.state.selectedDate,
+                text: 'Selected'
+            })
+        }
+
+        return tooltips
+    }
+
     render(){
         return (
             <View
                 selectedDate={this.state.selectedDate}
-                tooltips={this.props.tooltips || []}
+                tooltips={this.getTooltips()}
                 onDatePicked={this.onDatePicked}
                 onNextMonth={this.onNextMonth} 
                 onPreviousMonth={this.onPreviousMonth} 

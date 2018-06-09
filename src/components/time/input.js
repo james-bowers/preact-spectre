@@ -37,8 +37,8 @@ export default class DateTimeInput extends Component {
 	render = (props) => {
 		return (
 			<div>
-				<Time onChange={this.onTimeChange} />
-				<Calendar onDatePicked={this.onDateChange} />
+				<Time value={this.state.date} onChange={this.onTimeChange} />
+				<Calendar value={this.state.date} onDatePicked={this.onDateChange} />
 				<input type='hidden' name={props.name} value={this.state.date.toISOString()} />
 			</div>
 		)

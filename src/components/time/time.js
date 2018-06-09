@@ -4,8 +4,16 @@ import * as Grid from '../grid'
 import * as Form from '../form'
 
 export default class Time extends Component {
+
+	constructor(props){
+		super(props)
+		this.state = {
+			minutes: props.value ? props.value.getMinutes() : 0,
+			hours:   props.value ? props.value.getHours()   : 0
+		}
+	}
 	
-	render = ({ onChange }) => {
+	render = ({ onChange, value }) => {
 		let minuteOptions = []
 		let hourOptions = []
 
@@ -23,8 +31,8 @@ export default class Time extends Component {
 			this.setState({ [type]: value })
 
 			onChange({
-				minutes: this.state.minutes || 0,
-				hours: this.state.hours || 0
+				minutes: this.state.minutes,
+				hours: this.state.hours
 			})
 		}
 
@@ -36,7 +44,7 @@ export default class Time extends Component {
 							<Form.Label>Hours</Form.Label>
 						</Grid.Column>
 						<Grid.Column small="12" fallback="8">
-							<Select.Select onChange={onTimeChange.bind(null, 'hours')}>
+							<Select.Select value={value ? value.getHours() : 0} onChange={onTimeChange.bind(null, 'hours')}>
 								{hourOptions}
 							</Select.Select>
 						</Grid.Column>
@@ -48,7 +56,7 @@ export default class Time extends Component {
 							<Form.Label>Minutes</Form.Label>
 						</Grid.Column>
 						<Grid.Column small="12" fallback="8">
-							<Select.Select onChange={onTimeChange.bind(null, 'minutes')}>
+							<Select.Select value={value ? value.getMinutes() : 0} onChange={onTimeChange.bind(null, 'minutes')}>
 								{minuteOptions}
 							</Select.Select>
 						</Grid.Column>
