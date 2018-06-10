@@ -242,12 +242,13 @@ export default function render(){
 				<Card.Container>
 					<Card.Body>
 						<ModalDateTimeInput value={new Date('2018-07-17T03:25:00')} name="datetime-2">
-							<Button.Button>Change date!</Button.Button>
+							<Button.Button>Change date (has date value)!</Button.Button>
+						</ModalDateTimeInput>
+						<ModalDateTimeInput name="datetime-3">
+							<Button.Button>Change date (has no value)!</Button.Button>
 						</ModalDateTimeInput>
 					</Card.Body>
 				</Card.Container>
-
-				
 			</section>
 		</div>
 	);

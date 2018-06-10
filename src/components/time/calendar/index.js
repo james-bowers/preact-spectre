@@ -6,10 +6,12 @@ export default class Calendar extends Component {
     constructor(props){
         super(props)
 
+        // use new date to get the current month and 
+        // year to show if date value not given
         let date = props.date || new Date()
 
         this.state = {
-            selectedDate: date,
+            selectedDate: props.date, // can be undefined, if date not selected
             month: date.getMonth(),
             year: date.getFullYear()
         }

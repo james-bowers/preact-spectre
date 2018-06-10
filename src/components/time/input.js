@@ -9,13 +9,13 @@ export default class DateTimeInput extends Component {
 		super(props)
 
 		this.state = {
-			date: props.value || new Date()	 
+			date: props.value	 
 		}
 	}
 
 	onTimeChange = ({ hours, minutes }) => {
 		// manipulate date using hours and minutes
-		let newDate = this.state.date
+		let newDate = this.state.date || new Date()
 		newDate.setMinutes(minutes)
 		newDate.setHours(hours)
 
@@ -25,9 +25,9 @@ export default class DateTimeInput extends Component {
 
 	onDateChange = (date) => {
 		// only use date for month and day.
-		let newDate = this.state.date
+		let newDate = this.state.date || new Date()
 		newDate.setMonth(date.getMonth())
-		newDate.setYear(date.getYear())
+		newDate.setFullYear(date.getFullYear())
 		newDate.setDate(date.getDate())
 
 		this.setState({ date: newDate })
@@ -35,11 +35,13 @@ export default class DateTimeInput extends Component {
 	}
 
 	render = (props) => {
+		let ISOStringValue = this.state.date ? this.state.date.toISOString() : ''
+
 		return (
 			<div>
 				<Time date={this.state.date} onChange={this.onTimeChange} />
 				<Calendar date={this.state.date} onDatePicked={this.onDateChange} />
-				<input type='hidden' name={props.name} value={this.state.date.toISOString()} />
+				<input type='hidden' name={props.name} value={ISOStringValue} />
 			</div>
 		)
 	}
