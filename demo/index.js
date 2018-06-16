@@ -18,18 +18,19 @@ export default function render(){
 		});
 	}
 
-	let card = (<Card.Container>
+	let card = (<a><Card.Container>
 		<Card.ImageContainer height="200px">
 			<Img.Img src="https://ticketbuddy.co.uk/static/logo/blue_1024.png" />
 		</Card.ImageContainer>
 		<Card.Header title="Title" subtitle="subtitle" />
 		<Card.Body>
 			<p>This is the main content of the card component.</p>
+			<a>a link</a>
 		</Card.Body>
 		<Card.Footer>
 			<Button.Button full>Tickets</Button.Button>
 		</Card.Footer>
-	</Card.Container>);
+	</Card.Container></a>);
 
 	return (
 		<div>

@@ -20,6 +20,7 @@ import * as Header from './components/header'
 import * as Modal from './components/modal'
 import * as Breadcrumb from './components/breadcrumb'
 import * as Toast from './components/toast'
+import * as Table from './components/table'
 import Calendar from './components/time/calendar'
 import Time from './components/time/time.js'
 import DateTimeInput from './components/time/input'
@@ -31,7 +32,7 @@ export {
 	Select, Radio, Switch, TextArea, Menu, TextInput,
 	Grid, Tile, Tooltip, Empty, Header, Modal, Breadcrumb, 
 	Toast, Calendar, Time, DateTimeInput, ModalDateTimeInput,
-	NoPrint
+	NoPrint, Table
 }
 
 export default {
@@ -39,5 +40,5 @@ export default {
 	Select, Radio, Switch, TextArea, Menu, TextInput,
 	Grid, Tile, Tooltip, Empty, Header, Modal, Breadcrumb, 
 	Toast, Calendar, Time, DateTimeInput, ModalDateTimeInput,
-	NoPrint
+	NoPrint, Table
 }
