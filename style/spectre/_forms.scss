@@ -108,6 +108,7 @@ textarea.form-input {
 // Form element: Select
 .form-select {
   appearance: none;
+  -webkit-appearance: none;
   border: $border-width solid $border-color-dark;
   border-radius: $border-radius;
   color: inherit;

@@ -1,6 +1,6 @@
 {
   "name": "@ticketbuddy/preact-spectre",
-  "version": "1.0.20",
+  "version": "1.0.22",
   "description": "",
   "main": "dist/bundle.js",
   "scripts": {

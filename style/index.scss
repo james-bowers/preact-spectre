@@ -24,6 +24,10 @@ $dark-color: #2b4f76;
 	@include animation('slide-up-and-in .5s 1');
 }
 
+@media print {
+    .noPrint { display: none; }
+}
+
 // Import full Spectre source code
 @import "./spectre/spectre-exp.scss";
 @import "./spectre/spectre-icons.scss";
